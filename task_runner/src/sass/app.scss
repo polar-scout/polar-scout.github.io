@@ -1,0 +1,21 @@
+// Hari PWA main application file.
+
+@import
+
+// Bootstrap
+// Core variables and mixins
+"node_modules/bootstrap/scss/normalize",
+"node_modules/bootstrap/scss/variables",
+"node_modules/bootstrap/scss/mixins",
+// Core CSS
+"node_modules/bootstrap/scss/reboot",
+"node_modules/bootstrap/scss/grid",
+// Utility classes
+"node_modules/bootstrap/scss/utilities/visibility",
+
+// Modules and Variables
+"partials/base",
+
+// Site partials
+"partials/global",
+"partials/navigation";

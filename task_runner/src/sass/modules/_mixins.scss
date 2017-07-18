@@ -1,0 +1,17 @@
+/* Transitions */
+@mixin transition($property, $duration, $function) {
+  -webkit-transition: $property $duration $function;
+     -moz-transition: $property $duration $function;
+      -ms-transition: $property $duration $function;
+       -o-transition: $property $duration $function;
+          transition: $property $duration $function;
+}
+/* Box Shadow */
+@mixin box-shadow($shadow1, $shadow2:false) {
+  $params: $shadow1;
+  @if $shadow2
+  { $params: $shadow1, $shadow2; }
+  -webkit-box-shadow: $params;
+     -moz-box-shadow: $params;
+          box-shadow: $params;
+}

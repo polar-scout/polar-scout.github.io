@@ -1,0 +1,39 @@
+// Extra small devices (portrait phones, less than 576px)
+// No media query since this is the default in Bootstrap
+
+$screen-sm: 576px;
+$screen-md: 768px;
+$screen-lg: 992px;
+$screen-xl: 1200px;
+
+
+// Small devices (e.g. landscape phones)
+@mixin screen-sm {
+    @media ( min-width: $screen-sm ) {
+        @content
+    }
+}
+
+// Medium devices (e.g. tablets)
+@mixin screen-md {
+    @media ( min-width: $screen-md ) {
+        @content
+    }
+}
+
+// Large devices (e.g. desktops)
+@mixin screen-lg {
+    @media ( min-width: $screen-lg ) {
+        @content
+    }
+}
+
+// Extra large devices (e.g. large desktops)
+@mixin screen-xl {
+    @media ( min-width: $screen-xl ) {
+        @content
+    }
+}
+
+
+

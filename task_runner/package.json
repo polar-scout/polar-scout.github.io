@@ -1,0 +1,39 @@
+{
+  "name": "lec-web-development",
+  "version": "1.0.0",
+  "description": "Portfolio",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "author": "Laura Conway",
+  "bugs": {
+    "url": ""
+  },
+  "homepage": "/",
+  "devDependencies": {
+    "autoprefixer": "6.7.0",
+    "cssnano": "3.10.0",
+    "del": "2.2.2",
+    "gulp": "3.9.1",
+    "gulp-closure-compiler": "0.4.0",
+    "gulp-concat": "2.6.1",
+    "gulp-notify": "2.2.0",
+    "gulp-plumber": "1.0.1",
+    "gulp-postcss": "6.3.0",
+    "gulp-rename": "1.2.2",
+    "gulp-sass": "3.0.0",
+    "gulp-sourcemaps": "1.9.1",
+    "gulp-uglify": "2.0.1",
+    "postcss-svg-fragments": "2.2.0",
+    "sw-precache": "^5.1.1"
+  },
+  "dependencies": {
+    "run-sequence": "1.2.2",
+    "bootstrap": "^4.0.0-alpha.6",
+    "jquery": "^3.1.0"
+  }
+}
