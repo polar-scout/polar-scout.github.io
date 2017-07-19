@@ -16,16 +16,31 @@
 
     // The rest of code goes here!
 
+    window.pAsyncInit = function() {
+        PDK.init({
+            appId: "4912419253518348031", // Change this
+            cookie: true
+        });
+    };
+
+    (function(d, s, id){
+        var js, pjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) {return;}
+        js = d.createElement(s); js.id = id;
+        js.src = "//assets.pinterest.com/sdk/sdk.js";
+        pjs.parentNode.insertBefore(js, pjs);
+    }(document, 'script', 'pinterest-jssdk'));
+
     // Const
     var PIN_APP   = '4912419253518348031',
-          PIN_SCOPE = 'read_public, write_public',
-          PIN_BTN   = document.getElementById('js-pin_btn');
+        PIN_SCOPE = 'read_public, write_public',
+        PIN_BTN   = document.getElementById('js-pin_btn');
 
     // Initialize once with app id
-    PDK.init({
-        appId: PIN_APP,
-        cookie: true
-    });
+    // PDK.init({
+    //     appId: PIN_APP,
+    //     cookie: true
+    // });
 
     var Login = {
 
@@ -43,6 +58,15 @@
          */
         pinLogin: function() {
             Pinterest.login(Login.resetState);
+        },
+
+        tittybats: function() {
+            console.log('tittybats called!');
+        },
+
+        fake: function() {
+            console.log('please log me in');
+            Pinterest.bum_me(Login.tittybats);
         }
 
     }
@@ -66,11 +90,18 @@
          */
         loggedIn: function() {
             return !!PDK.getSession();
+        },
+
+        bum_me: function(callback) {
+            console.log('turtles called!');
+            callback;
         }
 
     };
 
-    PIN_BTN.addEventListener('click', Login.pinLogin());
+    // PIN_BTN.addEventListener('click', Login.pinLogin());
+
+    PIN_BTN.addEventListener('click', Login.fake());
 
 }));
 
