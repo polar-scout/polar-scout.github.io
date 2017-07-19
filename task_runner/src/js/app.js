@@ -94,14 +94,18 @@
 
         bum_me: function(callback) {
             console.log('turtles called!');
-            callback;
+            callback();
         }
 
     };
 
-    // PIN_BTN.addEventListener('click', Login.pinLogin());
+    // PIN_BTN.addEventListener('click', function(){
+    //     Login.fake();
+    // });
 
-    PIN_BTN.addEventListener('click', Login.fake());
+     PIN_BTN.addEventListener('click', function(){
+        Login.pinLogin();
+    });
 
 }));
 
