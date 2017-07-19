@@ -17,7 +17,7 @@
     // The rest of code goes here!
 
     // Const
-    const PIN_APP   = '4912419253518348031',
+    var PIN_APP   = '4912419253518348031',
           PIN_SCOPE = 'read_public, write_public',
           PIN_BTN   = document.getElementById('js-pin_btn');
 
