@@ -81,6 +81,7 @@
          */
         login: function(callback) {
             PDK.login({ scope : PIN_SCOPE }, callback);
+            console.log(PDK.login({ scope : PIN_SCOPE }, callback))
         },
 
         /*
