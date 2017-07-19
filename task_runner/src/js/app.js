@@ -10,12 +10,11 @@
     // Listen for the jQuery ready event on the document
     $(function() {
 
-
-        console.log('de');
+        console.log('mutha');
 
         window.pAsyncInit = function() {
             PDK.init({
-                appId: "<4912419253518348031>", // Change this
+                appId: "4912419253518348031", // Change this
                 cookie: true
             });
         };
