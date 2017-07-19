@@ -10,7 +10,7 @@
     // Listen for the jQuery ready event on the document
     $(function() {
 
-        console.log('mutha');
+        console.log('muthafuka');
 
     });
 
