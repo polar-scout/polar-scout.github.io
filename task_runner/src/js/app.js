@@ -31,7 +31,6 @@
         pjs.parentNode.insertBefore(js, pjs);
     }(document, 'script', 'pinterest-jssdk'));
 
-    // Const
     var PIN_APP   = '4912419253518348031',
         PIN_SCOPE = 'read_public, write_public',
         PIN_BTN   = document.getElementById('js-pin_btn');
@@ -101,7 +100,7 @@
 
     // PIN_BTN.addEventListener('click', function(){
     //     Login.fake();
-    // });
+    // })
 
      PIN_BTN.addEventListener('click', function(){
         Login.pinLogin();
