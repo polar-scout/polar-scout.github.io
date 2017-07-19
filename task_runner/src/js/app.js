@@ -18,8 +18,7 @@
 
     window.pAsyncInit = function() {
         PDK.init({
-            appId: "4912419253518348031", // Change this
-            cookie: true
+            appId: "4912419253518348031"
         });
     };
 
@@ -84,7 +83,7 @@
         },
 
         /*
-         *  Use DK to determine auth state of user
+         *  Use SDK to determine auth state of user
          *  @returns {Boolean}
          */
         loggedIn: function() {
