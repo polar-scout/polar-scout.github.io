@@ -108,4 +108,54 @@
 
 }));
 
+//MANUAL AJAX REQUESTS
+var data;
+var apiToken = "access_token=ARhxTBPSqSPWo-3GVgBqioHMiD5iFNMaM771mVJELRpiRYArXQAAAAA&scope=read_public%2Cwrite_public";
+var api_request_url = "https://api.pinterest.com/v1/me/?" + apiToken + "fields=first_name%2Cid%2Clast_name%2Curl%2Cusernme";
+function getUsername() {
+  var xhttp = new XMLHttpRequest();
+  xhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+        data = JSON.parse(this.response);
+    }
+  };
+  xhttp.open("GET", api_request_url, true);
+  xhttp.send();
+}
 
+/*
+ * PDK requests
+ */
+var pins = [];
+PDK.request('/boards/polarsix/mandala-tapestry/pins/', function (response) { // Make sure to change the board_id
+  if (!response || response.error) {
+    alert('Error occurred');
+  } else {
+    pins = pins.concat(response.data);
+    if (response.hasNext) {
+      response.next(); // this will recursively go to this same callback
+    }
+  }
+});
+
+/*
+ * Quickly get logged in user's information
+ */
+PDK.request('/v1/me/');
+
+
+/*
+ * Create a board
+ */
+var api_token = PDK.getSession().accessToken;
+var api_post_boards_url_start = "https://api.pinterest.com/v1/boards/?access_token=" + api_token;
+function create_board($board_name) {
+  var xhttp = new XMLHttpRequest();
+  xhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+        data = JSON.parse(this.response);
+    }
+  };
+  xhttp.open("POST", api_post_boards_url_start + '&name=' + $board_name, true);
+  xhttp.send();
+}
